@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../utils/custom_text_style.dart';
 
-
 class CustomTabBar extends StatefulWidget {
-
   const CustomTabBar({
     Key? key,
     required this.tabs,
@@ -17,10 +15,10 @@ class CustomTabBar extends StatefulWidget {
 
 class _CustomTabBarState extends State<CustomTabBar>
     with TickerProviderStateMixin {
-
   @override
   Widget build(BuildContext context) {
-    final TabController tabController = TabController(length: widget.tabs.length, vsync: this);
+    final TabController tabController =
+        TabController(length: widget.tabs.length, vsync: this);
 
     return Container(
       height: 36.0,

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class CustomGradientElevatedButton extends StatelessWidget {
-
   const CustomGradientElevatedButton({
     Key? key,
     required this.onPressed,
@@ -31,7 +30,7 @@ class CustomGradientElevatedButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          primary: Colors.transparent,
+          backgroundColor: Colors.transparent,
           shadowColor: Colors.transparent,
           shape: RoundedRectangleBorder(borderRadius: borderRadius),
         ),

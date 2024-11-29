@@ -7,7 +7,7 @@ import 'package:provider/provider.dart';
 import '../models/list_item.dart';
 import '../routers.dart';
 import '../utils/custom_text_style.dart';
-import '../viewmodels/landing_page_model.dart';
+import '../view-models/landing_page_model.dart';
 import 'base_view.dart';
 
 class LandingPage extends StatelessWidget {
@@ -39,15 +39,17 @@ class LandingPage extends StatelessWidget {
           RoutePaths.viewPage, Colors.blue[700]),
       ListItem(const Icon(Icons.layers_outlined, color: Colors.yellow),
           RoutePaths.layoutPage, Colors.blue[600]),
-      ListItem(const Icon(Icons.add_alert, color: Colors.red), RoutePaths.alertPage,
-          Colors.blue[500])
+      ListItem(const Icon(Icons.add_alert, color: Colors.red),
+          RoutePaths.alertPage, Colors.blue[500]),
+      ListItem(const Icon(Icons.looks_one, color: Colors.red),
+          RoutePaths.aPage, Colors.blue[500])
     ];
     return ListView.builder(
         itemBuilder: (BuildContext context, int index) {
           return GestureDetector(
             child: _getItem(list[index]),
             onTap: () {
-              print("[DEBUG]:${list[index].title}");
+              print('[DEBUG]:${list[index].title}');
               switch (list[index].title) {
                 case RoutePaths.viewPage:
                   Navigator.of(context).pushNamed(RoutePaths.viewPage);
@@ -57,6 +59,9 @@ class LandingPage extends StatelessWidget {
                   break;
                 case RoutePaths.alertPage:
                   Navigator.of(context).pushNamed(RoutePaths.alertPage);
+                  break;
+                case RoutePaths.aPage:
+                  Navigator.of(context).pushNamed(RoutePaths.aPage);
                   break;
               }
             },

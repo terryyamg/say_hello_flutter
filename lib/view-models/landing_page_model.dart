@@ -5,7 +5,6 @@ import '../view_state.dart';
 import 'base_model.dart';
 
 class LandingPageViewModel extends BaseModel {
-
   LandingPageViewModel({required Api api}) : super(api: api);
 
   Future<void> loadData() async {

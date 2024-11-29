@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import '../api/api.dart';
 import '../view_state.dart';
 
-
 class BaseModel extends ChangeNotifier {
-
   BaseModel({required this.api});
   Api api;
   bool disposed = false;
